@@ -19,7 +19,8 @@
 // };
 
 var BlinkyDancer = function(top, left, timeBetweenSteps){
-  Dancer.call(this, top, left, timeBetweenSteps);
+  Dancer.apply(this, arguments);
+  this.$node.addClass("blinky");
 };
 // set delagation relationship
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
