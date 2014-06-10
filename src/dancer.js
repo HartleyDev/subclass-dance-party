@@ -37,6 +37,8 @@ var Dancer = function(top,left,timeBetweenSteps){
   this.$node.mouseover(function(){
     //this.setPosition(500, 500);
     $(this).css({top:500, left: 500});
+    $audio = $('<audio autoplay><source src="applause.mp3" type="audio/mpeg"></audio>')
+    $(this).append($audio);
   });
   this._timeBetweenSteps = timeBetweenSteps;
   this.setPosition(top,left);
