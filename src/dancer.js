@@ -39,8 +39,8 @@ var Dancer = function(top,left,timeBetweenSteps){
     $(this).css({top:500, left: 500});
   });
   this._timeBetweenSteps = timeBetweenSteps;
-  this.step();
   this.setPosition(top,left);
+  this.step();
 };
 
 Dancer.prototype.step = function(){
@@ -51,7 +51,13 @@ Dancer.prototype.lineUp = function(){
   this.setPosition(this.$node.css('top'),0);
 };
 
+Dancer.prototype.distance = function(dancer){
+  return Math.sqrt(Math.pow(this._left - dancer._left, 2) + Math.pow(this._top - dancer._top, 2));
+};
+
 Dancer.prototype.setPosition = function(top,left){
+  this._top = top;
+  this._left = left;
   var styleSettings = {
     top: top,
     left: left
