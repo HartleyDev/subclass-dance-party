@@ -1,4 +1,4 @@
-describe("familyGuyDancer", function() {
+describe("alwaysSunnyDancer", function() {
 
   var familyGuyDancer;
   var timeBetweenSteps = 100;

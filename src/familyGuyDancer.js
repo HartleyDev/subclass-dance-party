@@ -1,6 +1,6 @@
 var FamilyGuyDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
-  this.$node.html('<img class="stewie" src="stewie.gif">');
+  this.$node.html('<img class="stewie rotate" src="stewie.gif">');
 };
 
 FamilyGuyDancer.prototype = Object.create(Dancer.prototype);
